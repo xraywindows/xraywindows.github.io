@@ -1,0 +1,237 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://xraywindows.github.io/news/article-21644.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>vue中captcha.js生成验证码</title>
+        <meta name="description" content="转载来自于：链接 一.本地引入 1.下载： git clone https://github.com/saucxs/captcha.git 2.下载到本地以后引入： &lt;script type="" />
+        <link rel="icon" href="__ADDON__/img/xraywindows/favicon.ico" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <!-- CSS here -->
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/slicknav.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/flaticon.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/animate.min.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/themify-icons.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/slick.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/nice-select.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/style.css">
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3W6FX62N6S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3W6FX62N6S');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body class="body-bg" data-page="detail">
+        <!--? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img href="/assets/website/img/xraywindows/logo/loder.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <header>
+        <!-- Header Start -->
+        <div class="header-area">
+            <div class="main-header ">
+                <div class="header-bottom  header-sticky">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <!-- Logo -->
+                            <div class="col-md-4">
+                                <div class="logo">
+                                                                        <a href="/"><span>Xray Windows</span></a>
+                                                                    </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="menu-wrapper  d-flex align-items-center justify-content-end">
+                                    <!-- Main-menu -->
+                                    <div class="main-menu d-none d-lg-block">
+                                        <nav>
+                                            <ul id="navigation">
+                                                                                                <li><a href="/">首页</a></li>
+                                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                                                <li><a href="#">关于</a></li>
+                                                <li><a href="#">联系</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Mobile Menu -->
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <main>
+        <!--? Hero Start -->
+        <div class="slider-area2">
+            <div class="slider-height2 hero-overly2 d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap hero-cap2 text-center">
+                                <h1>vue中captcha.js生成验证码</h1>
+                                <p>
+                                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / <span>正文</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--? Categories Area Start -->
+        <div class="categories-area section-padding30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                          				  				  				<div id="content_views" class="markdown_views prism-atom-one-light"> </h1> <p>转载来自于：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/saucxs/article/details/88323811"  rel="nofollow">链接</a></p> <h2><a id="_3" rel="nofollow"></a>一.本地引入</h2> <p><strong>1.下载：</strong></p> <pre><code class="prism language-c">git clone https<span class="token punctuation">:</span><span class="token operator">/</span><span class="token operator">/</span>github<span class="token punctuation">.</span>com<span class="token operator">/</span>saucxs<span class="token operator">/</span>captcha<span class="token punctuation">.</span>git</code></pre> <p><strong>2.下载到本地以后引入：</strong></p> <pre><code class="prism language-javascript"><span class="token operator">&lt;</span>script type<span class="token operator">=</span><span class="token string">"text/javascript"</span> src<span class="token operator">=</span><span class="token string">"./captcha.js"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span></code></pre> <p><strong>3.容器：</strong></p> <pre><code class="prism language-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>canvas</span><span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>240<span class="token punctuation">"</span></span><span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>90<span class="token punctuation">"</span></span><span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>captcha1<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>canvas</span><span class="token punctuation">&gt;</span></span></code></pre> <p><strong>4.js代码：dom加载完毕以后</strong><br /> 1）默认：</p> <pre><code class="prism language-javascript"><span class="token comment">/*不传值，统一走默认值*/</span><span class="token keyword">let</span> captcha1<span class="token operator">=</span><span class="token keyword">new</span><span class="token class-name">Captcha</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     captcha1<span class="token punctuation">.</span><span class="token function">draw</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#captcha1'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> r<span class="token operator">=&gt;</span><span class="token punctuation">{<!-- --></span>         console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>r<span class="token punctuation">,</span><span class="token string">'验证码1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre> <p>效果：<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220706/7f1dbe93188250a6de4239c8d4982862.jpg" alt="vue中captcha.js生成验证码"></p> <p>2）自定义：</p> <pre><code class="prism language-javascript"><span class="token keyword">let</span> captcha2<span class="token operator">=</span><span class="token keyword">new</span><span class="token class-name">Captcha</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>         lineWidth<span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token comment">//线条宽度</span>         lineNum<span class="token punctuation">:</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token comment">//线条数量</span>         dotR<span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token comment">//点的半径</span>         dotNum<span class="token punctuation">:</span><span class="token number">25</span><span class="token punctuation">,</span><span class="token comment">//点的数量</span>         preGroundColor<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">80</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token comment">//前景色区间</span>         backGroundColor<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token number">150</span><span class="token punctuation">,</span><span class="token number">250</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token comment">//背景色区间</span>         fontSize<span class="token punctuation">:</span><span class="token number">30</span><span class="token punctuation">,</span><span class="token comment">//字体大小</span>         fontFamily<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'Georgia'</span><span class="token punctuation">,</span><span class="token string">'微软雅黑'</span><span class="token punctuation">,</span><span class="token string">'Helvetica'</span><span class="token punctuation">,</span><span class="token string">'Arial'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token comment">//字体类型</span>         fontStyle<span class="token punctuation">:</span><span class="token string">'stroke'</span><span class="token punctuation">,</span><span class="token comment">//字体绘制方法，有fill和stroke</span>         content<span class="token punctuation">:</span><span class="token string">'一个验证码abcdefghijklmnopqrstuvw生成的插件使用的是canvas显示'</span><span class="token punctuation">,</span><span class="token comment">//验证码内容</span>         length<span class="token punctuation">:</span><span class="token number">6</span><span class="token comment">//验证码长度</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      captcha2<span class="token punctuation">.</span><span class="token function">draw</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#captcha2'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> r<span class="token operator">=&gt;</span><span class="token punctuation">{<!-- --></span>         console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>r<span class="token punctuation">,</span><span class="token string">'验证码2'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre> <p>效果：<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220706/fd4024bdc431346d82d39bd8538b3e2e.jpg" alt="vue中captcha.js生成验证码"></p> <p>二.npm引入<br /> 1.安装组件</p> <pre><code class="prism language-javascript">npm install captcha<span class="token operator">-</span>mini</code></pre> <p>2.引入模块</p> <pre><code class="prism language-javascript"><span class="token keyword">import</span> Captcha<span class="token keyword">from</span><span class="token string">'captcha-mini'</span> 或者<span class="token keyword">var</span> Captcha<span class="token operator">=</span><span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"captcha-mini"</span><span class="token punctuation">)</span></code></pre> <p>3.dom加载完以后的js<br /> 1）默认用法：</p> <pre><code class="prism language-javascript"><span class="token comment">/*不传值，统一走默认值*/</span><span class="token keyword">let</span> captcha1<span class="token operator">=</span><span class="token keyword">new</span><span class="token class-name">Captcha</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     captcha1<span class="token punctuation">.</span><span class="token function">draw</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#captcha1'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> r<span class="token operator">=&gt;</span><span class="token punctuation">{<!-- --></span>         console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>r<span class="token punctuation">,</span><span class="token string">'验证码1'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre> <p>2）自定义用法：</p> <pre><code class="prism language-javascript"><span class="token comment">/*自定义内容和样式*/</span><span class="token keyword">let</span> captcha2<span class="token operator">=</span><span class="token keyword">new</span><span class="token class-name">Captcha</span><span class="token punctuation">(</span><span class="token punctuation">{<!-- --></span>         lineWidth<span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token comment">//线条宽度</span>         lineNum<span class="token punctuation">:</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token comment">//线条数量</span>         dotR<span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token comment">//点的半径</span>         dotNum<span class="token punctuation">:</span><span class="token number">25</span><span class="token punctuation">,</span><span class="token comment">//点的数量</span>         preGroundColor<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span><span class="token number">80</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token comment">//前景色区间</span>         backGroundColor<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token number">150</span><span class="token punctuation">,</span><span class="token number">250</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token comment">//背景色区间</span>         fontSize<span class="token punctuation">:</span><span class="token number">30</span><span class="token punctuation">,</span><span class="token comment">//字体大小</span>         fontFamily<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">'Georgia'</span><span class="token punctuation">,</span><span class="token string">'微软雅黑'</span><span class="token punctuation">,</span><span class="token string">'Helvetica'</span><span class="token punctuation">,</span><span class="token string">'Arial'</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token comment">//字体类型</span>         fontStyle<span class="token punctuation">:</span><span class="token string">'stroke'</span><span class="token punctuation">,</span><span class="token comment">//字体绘制方法，有fill和stroke</span>         content<span class="token punctuation">:</span><span class="token string">'一个验证码abcdefghijklmnopqrstuvw生成的插件使用的是canvas显示'</span><span class="token punctuation">,</span><span class="token comment">//验证码内容</span>         length<span class="token punctuation">:</span><span class="token number">6</span><span class="token comment">//验证码长度</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      captcha2<span class="token punctuation">.</span><span class="token function">draw</span><span class="token punctuation">(</span>document<span class="token punctuation">.</span><span class="token function">querySelector</span><span class="token punctuation">(</span><span class="token string">'#captcha2'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> r<span class="token operator">=&gt;</span><span class="token punctuation">{<!-- --></span>         console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>r<span class="token punctuation">,</span><span class="token string">'验证码2'</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre> <p>样式：<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220706/ba244dada6733c8309aac80b7cbcfd81.jpg" alt="vue中captcha.js生成验证码"></p> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-21199.htm">宠物领养渠道是什么意思（宠物领养平台有哪些）</a></p>
+                                        <p>下一个：<a href="/news/article-21645.htm">动物打预防针去哪里（动物打预防针多少钱）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-9-3-free-node-subscribe-links.htm" title="「9月3日」最高速度22.1M/S，2024年Xray每天更新免费机场订阅节点链接">「9月3日」最高速度22.1M/S，2024年Xray每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-19-free-subscribe-node.htm" title="「11月19日」最高速度21.1M/S，2024年Xray每天更新免费机场订阅节点链接">「11月19日」最高速度21.1M/S，2024年Xray每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-13-winxray-windows.htm" title="「11月13日」最高速度19.4M/S，2024年Xray每天更新免费机场订阅节点链接">「11月13日」最高速度19.4M/S，2024年Xray每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/news/article-20742.htm" title="宠物粮食怎么销售出去 宠物粮食怎么销售出去的">宠物粮食怎么销售出去 宠物粮食怎么销售出去的</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-11-free-subscribe-node.htm" title="「11月11日」最高速度18.5M/S，2024年Xray每天更新免费机场订阅节点链接">「11月11日」最高速度18.5M/S，2024年Xray每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-9-winxray-node-github.htm" title="「9月9日」最高速度19.3M/S，2024年Xray每天更新免费机场订阅节点链接">「9月9日」最高速度19.3M/S，2024年Xray每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-10-winxray-node-share.htm" title="「9月10日」最高速度19.7M/S，2024年Xray每天更新免费机场订阅节点链接">「9月10日」最高速度19.7M/S，2024年Xray每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-8-winxray-windows.htm" title="「9月8日」最高速度21.9M/S，2024年Xray每天更新免费机场订阅节点链接">「9月8日」最高速度21.9M/S，2024年Xray每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-15-winxray-node-github.htm" title="「11月15日」最高速度22.6M/S，2024年Xray每天更新免费机场订阅节点链接">「11月15日」最高速度22.6M/S，2024年Xray每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/news/article-19822.htm" title="猫三联到底是几针（猫三联是几针啊）">猫三联到底是几针（猫三联是几针啊）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">15</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">17</span> <a href="/date/2024-08/" title="2024-08 归档">2024-08</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Services Area End -->
+    </main>
+        <footer>
+        <!--? Footer Start-->
+        <div class="footer-area section-bg" data-background="__ADDON__/img/xraywindows/gallery/footer_bg.jpg">
+            <div class="container">
+                <div class="footer-bottom">
+                    <div class="row d-flex justify-content-between align-items-center">
+                        <div class="col-xl-9 col-lg-8">
+                            <div class="footer-copy-right">
+                                <p>
+                                    Xray Windows节点订阅官网 版权所有 Powered by WordPress
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4">
+                            <!-- Footer Social -->
+                            <div class="footer-social f-right">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fas fa-globe"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End-->
+    </footer>
+    <!-- Scroll Up -->
+    <div id="back-top">
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>
+    <!-- JS here -->
+    <script src="/assets/website/js/frontend/xraywindows/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="/assets/website/js/frontend/xraywindows/vendor/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/popper.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="/assets/website/js/frontend/xraywindows/jquery.slicknav.min.js"></script>
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="/assets/website/js/frontend/xraywindows/owl.carousel.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/slick.min.js"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="/assets/website/js/frontend/xraywindows/wow.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/animated.headline.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/jquery.magnific-popup.js"></script>
+    <!-- Nice-select, sticky -->
+    <script src="/assets/website/js/frontend/xraywindows/jquery.nice-select.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/jquery.sticky.js"></script>
+
+    <!-- contact js -->
+    <script src="/assets/website/js/frontend/xraywindows/contact.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/jquery.form.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/jquery.validate.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/mail-script.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/jquery.ajaxchimp.min.js"></script>
+    <!-- Jquery Plugins, main Jquery -->
+    <script src="/assets/website/js/frontend/xraywindows/plugins.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
