@@ -1,0 +1,253 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://xraywindows.github.io/news/article-43116.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>pyqt5入门到基本按钮弹窗，多窗口实现等</title>
+        <meta name="description" content="首先很重要的是，我们的工具！！！！ 本文使用的所有东西，python3.7，pycharm，pyqt5，designer 一、首先粗暴的pip我们需要的东西 pip install PyQt5 pip" />
+        <link rel="icon" href="/assets/website/img/xraywindows/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Xray Windows节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://xraywindows.github.io/news/article-43116.htm" />
+    <meta property="og:site_name" content="Xray Windows节点订阅官网" />
+    <meta property="og:title" content="pyqt5入门到基本按钮弹窗，多窗口实现等" />
+    <meta property="og:image" content="https://xraywindows.github.io/uploads/20240815/01a5ebca5a3bb974f0beedf18b282402.webp" />
+        <meta property="og:release_date" content="2025-01-19T07:10:58" />
+    <meta property="og:updated_time" content="2025-01-19T07:10:58" />
+        <meta property="og:description" content="首先很重要的是，我们的工具！！！！ 本文使用的所有东西，python3.7，pycharm，pyqt5，designer 一、首先粗暴的pip我们需要的东西 pip install PyQt5 pip" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+    <!-- CSS here -->
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/slicknav.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/flaticon.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/animate.min.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/themify-icons.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/slick.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/nice-select.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/style.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3W6FX62N6S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3W6FX62N6S');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body class="body-bg" data-page="detail">
+        <!--? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img href="/assets/website/img/xraywindows/logo/loder.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <header>
+        <!-- Header Start -->
+        <div class="header-area">
+            <div class="main-header ">
+                <div class="header-bottom  header-sticky">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <!-- Logo -->
+                            <div class="col-md-4">
+                                <div class="logo">
+                                                                        <a href="/"><span>Xray Windows</span></a>
+                                                                    </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="menu-wrapper  d-flex align-items-center justify-content-end">
+                                    <!-- Main-menu -->
+                                    <div class="main-menu d-none d-lg-block">
+                                        <nav>
+                                            <ul id="navigation">
+                                                                                                <li><a href="/">首页</a></li>
+                                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                                                <li><a href="#">关于</a></li>
+                                                <li><a href="#">联系</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Mobile Menu -->
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <main>
+        <!--? Hero Start -->
+        <div class="slider-area2">
+            <div class="slider-height2 hero-overly2 d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap hero-cap2 text-center">
+                                <h1>pyqt5入门到基本按钮弹窗，多窗口实现等</h1>
+                                <p>
+                                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / <span>正文</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--? Categories Area Start -->
+        <div class="categories-area section-padding30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <p><strong>首先很重要的是，我们的工具！！！！</strong><br /> 本文使用的所有东西，python3.7，pycharm，pyqt5，designer</p> <p><strong>一、首先粗暴的pip我们需要的东西</strong></p> <pre><code class="prism language-python">pip install PyQt5 pip install pyqt5<span class="token operator">-</span>tools   <span class="token triple-quoted-string string">"""关乎到designer这个工具,一定要下载哦"""</span> </code></pre> <p>然后按住win键，然后搜designer<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230205/3e55242c90240879a7bafde129c84ecc.jpg" alt="pyqt5入门到基本按钮弹窗，多窗口实现等"><br /> 出现这个工具说明ok，工具上你已经成功了一半<br /> 请拉到桌面，后面要用</p> <p><strong>二、建立pycharm里的外部工具PyUIC</strong><br /> 这个工具有什么用？<br /> 直接把我们设计的设计的ui界面转换为py文件，你说方便不<br /> 具体操作，直接截图了，在外部工具里添加就好<br /> 注意几个点：<br /> 1.名字随意起，建议PyUIC<br /> 2.Program：python安装位置<br /> 3.Arguments：</p> <blockquote> <p><code>-m PyQt5.uic.pyuic $FileName$ -o $FileNameWithoutExtension$.py</code></p> </blockquote> <p>4.working dir：<code>$FileDir$</code></p> <p><img decoding="async" src="http://img.555519.xyz/uploads/20230205/01430bfddd82102f521cbe7b4812aa8d.jpg" alt="pyqt5入门到基本按钮弹窗，多窗口实现等"><br /><strong>三、打开designer，开始设计框架</strong><br /> 打开designer<br /> 首先创建窗体咯<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230205/4e62c8cddcb0b26a2aefed7b1216c27e.jpg" alt="pyqt5入门到基本按钮弹窗，多窗口实现等"><br /> 然后随便设计一下，把需要的控件拖进去就好。<br /> 然后就是关键了，主要就是拖动pushbutton进去，刚入门，先学按钮事件吧。<br /> 我设计的第一个窗体new.ui<br /> 1、第一个界面<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230205/3fa413b57bff89182cef53730ddbf3bf.jpg" alt="pyqt5入门到基本按钮弹窗，多窗口实现等"><br /> 很简单，就两个按钮，完事。<br /> 2、第二个界面<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230205/7cd874465645be0b24e1c8396a6c715d.jpg" alt="pyqt5入门到基本按钮弹窗，多窗口实现等"></p> <p>3、第三个界面<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230205/422803fa3c80674aa8aca37c070e338e.jpg" alt="pyqt5入门到基本按钮弹窗，多窗口实现等"><br /><strong>四、.ui文件转换为.py文件</strong><br /><img decoding="async" src="http://img.555519.xyz/uploads/20230205/d81dc99b9264992033f4102a41bd9952.jpg" alt="pyqt5入门到基本按钮弹窗，多窗口实现等"><br /> 直接使用外部工具点击完会生成一个.py文件的<br /><strong>五、让界面显示</strong><br /> 直接生成的.py文件运行，并不会显示，因为还没有实例化。<br /> 常用的实例化过程（绝对让你少走弯路）：<br /> 上面我们有3个窗口所以用完pyuic后有3个.py文件，分别是（<br /> 1、new.py<br /> 2、 login.py<br /> 3、second.py）<br /> ，我们先放着，不要乱动它的源码。新建一个python文件，main.py（我们的操作都在这里进行）<br /> 以下是main.py源码：</p> <pre><code class="prism language-python"><span class="token keyword">import</span> sys <span class="token keyword">from</span> PyQt5<span class="token punctuation">.</span>QtWidgets <span class="token keyword">import</span> QMainWindow<span class="token punctuation">,</span> QTextEdit<span class="token punctuation">,</span> QAction<span class="token punctuation">,</span> QFileDialog<span class="token punctuation">,</span> QApplication<span class="token punctuation">,</span> QMessageBox<span class="token punctuation">,</span>QDialog <span class="token keyword">from</span> new <span class="token keyword">import</span> <span class="token operator">*</span> <span class="token keyword">import</span> new <span class="token keyword">as</span> n <span class="token keyword">import</span> login <span class="token keyword">as</span> l <span class="token keyword">import</span> second <span class="token keyword">as</span> s  <span class="token keyword">class</span> <span class="token class-name">chuang_1</span><span class="token punctuation">(</span>QMainWindow<span class="token punctuation">,</span> n<span class="token punctuation">.</span>Ui_MainWindow<span class="token punctuation">)</span><span class="token punctuation">:</span>     <span class="token triple-quoted-string string">"""继承类"""</span>     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> parent<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>         <span class="token comment">#继承QMainWindow</span>         <span class="token builtin">super</span><span class="token punctuation">(</span>chuang_1<span class="token punctuation">,</span> self<span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>parent<span class="token punctuation">)</span>         self<span class="token punctuation">.</span>setupUi<span class="token punctuation">(</span>self<span class="token punctuation">)</span>   <span class="token keyword">class</span> <span class="token class-name">chuang_2</span><span class="token punctuation">(</span>QMainWindow<span class="token punctuation">,</span> l<span class="token punctuation">.</span>Ui_Form<span class="token punctuation">)</span><span class="token punctuation">:</span>     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> parent<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>         <span class="token builtin">super</span><span class="token punctuation">(</span>chuang_2<span class="token punctuation">,</span> self<span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>parent<span class="token punctuation">)</span>         self<span class="token punctuation">.</span>setupUi<span class="token punctuation">(</span>self<span class="token punctuation">)</span>   <span class="token keyword">class</span> <span class="token class-name">chuang_3</span><span class="token punctuation">(</span>QtWidgets<span class="token punctuation">.</span>QMainWindow<span class="token punctuation">,</span> s<span class="token punctuation">.</span>Ui_Form<span class="token punctuation">)</span><span class="token punctuation">:</span>     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>parent<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>         <span class="token comment">#实例化窗口</span>         <span class="token builtin">super</span><span class="token punctuation">(</span>chuang_3<span class="token punctuation">,</span> self<span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span>parent<span class="token punctuation">)</span>         self<span class="token punctuation">.</span>setupUi<span class="token punctuation">(</span>self<span class="token punctuation">)</span>   <span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>     app <span class="token operator">=</span> QApplication<span class="token punctuation">(</span>sys<span class="token punctuation">.</span>argv<span class="token punctuation">)</span>     <span class="token comment"># 实例化第一个窗口</span>     c1 <span class="token operator">=</span> chuang_1<span class="token punctuation">(</span><span class="token punctuation">)</span>     <span class="token comment"># 第二个</span>     c2 <span class="token operator">=</span> chuang_2<span class="token punctuation">(</span><span class="token punctuation">)</span>     <span class="token comment"># 第三个</span>     c3 <span class="token operator">=</span> chuang_3<span class="token punctuation">(</span><span class="token punctuation">)</span>     <span class="token comment">#全部显示出来</span>     c1<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>     c2<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>     c3<span class="token punctuation">.</span>show<span class="token punctuation">(</span><span class="token punctuation">)</span>     sys<span class="token punctuation">.</span>exit<span class="token punctuation">(</span>app<span class="token punctuation">.</span>exec_<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> </code></pre> <p>这样就显示我们的3个窗口了<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230205/9ada49e1fc9ce88206b9a8a9ff178a0c.jpg" alt="pyqt5入门到基本按钮弹窗，多窗口实现等"><br /> 接下来就是对按钮等进行一些设置，让多个窗口可以切换起来<br /><strong>六、界面切换（按钮事件）</strong></p> <p>首先设置让第一个界面点击“登录”可以跳转到第二个界面<br /> 记一下语法：</p> <pre><code class="prism language-python">self<span class="token punctuation">.</span>pushubutton<span class="token punctuation">.</span>clicked<span class="token punctuation">.</span>connect<span class="token punctuation">(</span>self<span class="token punctuation">.</span>hanshu<span class="token punctuation">)</span> </code></pre> <p>以下示范一下：<br /><img decoding="async" src="http://img.555519.xyz/uploads/20230205/5d94c19cbe4055eab4add1c24ac7468f.jpg" alt="pyqt5入门到基本按钮弹窗，多窗口实现等"></p> <p>下次有空再继续详细说一下别的操作</p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-43115.htm">PHP 关联数组详解</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-37173.htm" title="JAVA时间戳类Instant">JAVA时间戳类Instant</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-20-free-node-subscribe-links.htm" title="「10月20日」最高速度22.1M/S，2024年Xray每天更新免费机场订阅节点链接">「10月20日」最高速度22.1M/S，2024年Xray每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/news/article-18925.htm" title="如何将应用于表列的MySQL CONCAT()函数与其他表的列组合？">如何将应用于表列的MySQL CONCAT()函数与其他表的列组合？</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-25-node-share.htm" title="「12月25日」最高速度18.7M/S，2024年Xray每天更新免费机场订阅节点链接">「12月25日」最高速度18.7M/S，2024年Xray每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/news/article-26252.htm" title="2.使用httpclient发起post请求">2.使用httpclient发起post请求</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-22-free-subscribe-node.htm" title="「11月22日」最高速度18.4M/S，2024年Xray每天更新免费机场订阅节点链接">「11月22日」最高速度18.4M/S，2024年Xray每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-12-winxray-windows.htm" title="「12月12日」最高速度18.7M/S，2024年Xray每天更新免费机场订阅节点链接">「12月12日」最高速度18.7M/S，2024年Xray每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/news/article-42124.htm" title="动物疫苗注射的作用有哪些方面呢（动物疫苗包括哪些）">动物疫苗注射的作用有哪些方面呢（动物疫苗包括哪些）</a></li>
+                        <li class="py-2"><a href="/news/article-34774.htm" title="Kafka群起时报错：kafka-run-class.sh: line 258: exec: java: not found的解决办法">Kafka群起时报错：kafka-run-class.sh: line 258: exec: java: not found的解决办法</a></li>
+                        <li class="py-2"><a href="/news/article-29527.htm" title="纹绣美甲美睫培训学校哪家好（领绣集团纹绣培训学院）">纹绣美甲美睫培训学校哪家好（领绣集团纹绣培训学院）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">57</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">25</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Services Area End -->
+    </main>
+        <footer>
+        <!--? Footer Start-->
+        <div class="footer-area section-bg" data-background="/assets/website/img/xraywindows/gallery/footer_bg.jpg">
+            <div class="container">
+                <div class="footer-bottom">
+                    <div class="row d-flex justify-content-between align-items-center">
+                        <div class="col-xl-9 col-lg-8">
+                            <div class="footer-copy-right">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                                <p>
+                                    Xray Windows节点订阅官网 版权所有 Powered by WordPress
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4">
+                            <!-- Footer Social -->
+                            <div class="footer-social f-right">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fas fa-globe"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End-->
+    </footer>
+    <!-- Scroll Up -->
+    <div id="back-top">
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>
+    <!-- JS here -->
+    <script src="/assets/website/js/frontend/xraywindows/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="/assets/website/js/frontend/xraywindows/vendor/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/popper.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="/assets/website/js/frontend/xraywindows/jquery.slicknav.min.js"></script>
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="/assets/website/js/frontend/xraywindows/owl.carousel.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/slick.min.js"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="/assets/website/js/frontend/xraywindows/wow.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/animated.headline.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/jquery.magnific-popup.js"></script>
+    <!-- Nice-select, sticky -->
+    <script src="/assets/website/js/frontend/xraywindows/jquery.nice-select.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/jquery.sticky.js"></script>
+
+    <!-- contact js -->
+    <script src="/assets/website/js/frontend/xraywindows/contact.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/jquery.form.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/jquery.validate.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/mail-script.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/jquery.ajaxchimp.min.js"></script>
+    <!-- Jquery Plugins, main Jquery -->
+    <script src="/assets/website/js/frontend/xraywindows/plugins.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
