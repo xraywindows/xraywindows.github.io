@@ -1,0 +1,266 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://xraywindows.github.io/news/article-85536.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Snort中pcre和正则表达式的使用</title>
+        <meta name="description" content="1. 题目描述 If snort see two packets in a TCP flow with  first packet has “login” or “Initial” in payloa" />
+        <link rel="icon" href="/assets/website/img/xraywindows/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Xray Windows节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://xraywindows.github.io/news/article-85536.htm" />
+    <meta property="og:site_name" content="Xray Windows节点订阅官网" />
+    <meta property="og:title" content="Snort中pcre和正则表达式的使用" />
+    <meta property="og:image" content="https://xraywindows.github.io/uploads/20240815/b39c531934ebc23219f36d4970d967d5.webp" />
+        <meta property="og:release_date" content="2025-03-31T08:42:33" />
+    <meta property="og:updated_time" content="2025-03-31T08:42:33" />
+        <meta property="og:description" content="1. 题目描述 If snort see two packets in a TCP flow with  first packet has “login” or “Initial” in payloa" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Snort中pcre和正则表达式的使用">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- CSS here -->
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/slicknav.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/flaticon.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/animate.min.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/themify-icons.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/slick.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/nice-select.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/style.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3W6FX62N6S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3W6FX62N6S');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body class="body-bg" data-page="detail">
+        <!--? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="/assets/website/img/xraywindows/logo/loder.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <header>
+        <!-- Header Start -->
+        <div class="header-area">
+            <div class="main-header ">
+                <div class="header-bottom  header-sticky">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <!-- Logo -->
+                            <div class="col-md-4">
+                                <div class="logo">
+                                    <a href="/">
+                                                                        <span>Xray Windows</span>
+                                                                        </a>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="menu-wrapper  d-flex align-items-center justify-content-end">
+                                    <!-- Main-menu -->
+                                    <div class="main-menu d-none d-lg-block">
+                                        <nav>
+                                            <ul id="navigation">
+                                                                                                <li><a href="/">首页</a></li>
+                                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Mobile Menu -->
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <main>
+        <!--? Hero Start -->
+        <div class="slider-area2">
+            <div class="slider-height2 hero-overly2 d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap hero-cap2 text-center">
+                                <h1>Snort中pcre和正则表达式的使用</h1>
+                                <p>
+                                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / <span>正文</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--? Categories Area Start -->
+        <div class="categories-area section-padding30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				</h1> <h2 id="1-题目描述">1. 题目描述</h2> <p>If snort see two packets in a TCP flow with</p> <ul> <li>first packet has “login” or “Initial” in payload, destination port is 3399;</li> <li>and second packet has a “IPv4Address:Port”string(E.g. 123.45.6.7:8080) in payload. destination port is 3399;</li> <li>output an alert with msg “bot founded” and sid 1000001</li> </ul> <h2 id="2-解决方案">2. 解决方案</h2> <p>题目要求检测包含两个包的特定流，需要通过设置标记位，即<strong>flowbits</strong>来实现。另外，题目中均要求检测特定的字符串或模式，所以还需要在<strong>pcre</strong>字段中通过<strong>正则表达式</strong>实现。</p> <h3 id="21-第一条检测规则">2.1 第一条检测规则</h3> <ul> <li> <p><strong>匹配特定字符串</strong></p> <pre><code>pcre:"/login|Initial/";</code></pre> <p>正则表达式的两端需要加上限界符<code>/</code>。</p> </li> <li> <p><strong>设置标志位，同时不发出警报。</strong></p> <pre><code>flowbits:set,bot_founded;flowsbits:noalert;</code></pre> </li> </ul> <h3 id="22-第二条检测规则">2.2 第二条检测规则</h3> <h4 id="221-匹配模式ipv4addressport"><strong>2.2.1 匹配模式<code>IPv4Address:Port</code></strong></h4> <ul> <li> <p><strong>IPv4Address</strong></p> <p>IPv4地址使用点分十进制表示时，分为4组，每组的范围均为[0,255]。即从0.0.0.0到255.255.255.255。</p> <p>我们先分析单独一组的特点：</p> <table> <thead> <tr> <th style="text-align: center">区间</th> <th style="text-align: center">限制</th> <th style="text-align: center">表示</th> </tr> </thead> <tbody> <tr> <td style="text-align: center">0~99</td> <td style="text-align: center">没有任何限制</td> <td style="text-align: center"><code>\d{1,2}</code></td> </tr> <tr> <td style="text-align: center"><strong>1</strong>00~<strong>1</strong>99</td> <td style="text-align: center">后两位也没有任何限制</td> <td style="text-align: center"><code>1\d{2}</code></td> </tr> <tr> <td style="text-align: center"><strong>2</strong>00~<strong>2</strong>49</td> <td style="text-align: center">十位限制在0~4，个位没有限制</td> <td style="text-align: center"><code>2[0-4]\d</code></td> </tr> <tr> <td style="text-align: center"><strong>25</strong>0~<strong>25</strong>5</td> <td style="text-align: center">个位限制在0~5</td> <td style="text-align: center"><code>25[0-5]</code></td> </tr> </tbody> </table> <p>可以发现表格中前两种情况可以合并为<code>1?\d{1,2}</code>，所以可以用<code>25[0-5]|2[0-4]\d|1?\d{1,2}</code>来匹配0~255；</p> <p>将其作为一个<strong>分组</strong>，再考虑到<code>.</code>，我们可以写出如下正则表达式匹配IPv4地址：</p> <p><code>((25[0-5]|2[0-4]\d|1?\d{1,2})\.){3}(25[0-5]|2[0-4]\d|1?\d{1,2})</code></p> </li> </ul> <hr/> <blockquote> <p><strong>值得说明的是：</strong></p> <ol> <li> <p>这里我们认为数字前出现填充<code>0</code>的情况与非填充状态等价：</p> <p>如：<code>192.01.00.1</code>等价于<code>192.1.0.1</code>。</p> <p>这种情况下才能使用<code>\d{1,2}</code>，因为可能会出现<code>00</code>的情况。</p> </li> <li> <p>正则表达式的<strong>短路性质</strong>：</p> <p>当<code>|</code>运算符分隔的多个表达式有一个匹配成功时，该表达式之后的表达式将不会继续匹配。</p> <p>如：<code>A|B|C|D</code>，<code>B</code>匹配成功了，将不会再看<code>C</code>和<code>D</code>。</p> <p>所以上面匹配IPv4地址时，我们单独一个分组写成<code>25[0-5]|2[0-4]\d|1?\d{1,2}</code>而不是<code>1?\d{1,2}|2[0-4]\d|25[0-5]</code>。</p> <p>后者匹配<code>255</code>时，只会匹配到<code>25</code>和<code>5</code>，而不会匹配到<code>255</code>：</p> <div align="center"><img decoding="async" src="https://s1.ax1x.com/2022/03/29/qyJR3Q.png" alt="Snort中pcre和正则表达式的使用" width="80%"/></div> <p>同样后者构造的正则表达式去匹配<code>255.255.255.255</code>，只会匹配到<code>255.255.255.25</code>，缺少最后一个<code>5</code>：</p> <div align="center"><img decoding="async" src="https://s1.ax1x.com/2022/03/29/qyJU9e.png" alt="Snort中pcre和正则表达式的使用" width="80%"/></div> <p>因为它匹配到最后一组的<code>25</code>时就判定匹配成功，直接跳到末尾，结束匹配。而前面几组<code>255</code>正确匹配的原因是：如果只匹配<code>25</code>，	发现剩下的<code>5</code>和<code>.</code>不匹配，之后会进行回溯，继续检查后面的条件，发现<code>255</code>匹配成功且<code>.</code>也匹配成功，不再回溯。</p> </li> </ol> </blockquote> <ul> <li> <p><strong>Port</strong></p> <p>端口号的范围是0~65535，我们同样可以分成不同的区间来匹配端口号。</p> <table> <thead> <tr> <th style="text-align: center">区间</th> <th style="text-align: center">限制</th> <th style="text-align: center">表示</th> </tr> </thead> <tbody> <tr> <td style="text-align: center">0~9999</td> <td style="text-align: center">没有任何限制</td> <td style="text-align: center"><code>\d{1,4}</code></td> </tr> <tr> <td style="text-align: center"><strong>1</strong>0000~<strong>5</strong>9999</td> <td style="text-align: center">后四位没有任何限制</td> <td style="text-align: center"><code>[1-5]\d{4}</code></td> </tr> <tr> <td style="text-align: center"><strong>6</strong>0000~<strong>6</strong>4999</td> <td style="text-align: center">千位限制在0~4，后三位没有任何限制</td> <td style="text-align: center"><code>6[0-4]\d{3}</code></td> </tr> <tr> <td style="text-align: center"><strong>65</strong>000~<strong>65</strong>499</td> <td style="text-align: center">百位限制在0~4，后两位没有任何限制</td> <td style="text-align: center"><code>65[0-4]\d{2}</code></td> </tr> <tr> <td style="text-align: center"><strong>655</strong>00~<strong>655</strong>29</td> <td style="text-align: center">十位限制在0~4，个位没有任何限制</td> <td style="text-align: center"><code>655[0-2]\d</code></td> </tr> <tr> <td style="text-align: center"><strong>6553</strong>0~<strong>6553</strong>5</td> <td style="text-align: center">个位限制在0~5</td> <td style="text-align: center"><code>6553[0~5]</code></td> </tr> </tbody> </table> <p>同样，我们可以将表格前两种情况合并为<code>[1-5]?\d{1,4}</code>。结合上面提到的短路性质，我们可以写出最终用于匹配端口号的正则表达式：</p> <p><code>6553[0-5]|655[0-2]\d|65[0-4]\d{2}|6[0-4]\d{3}|[1-5]?\d{1,4}</code></p> </li> </ul> <h4 id="222-检查标志位">2.2.2 检查标志位</h4> <pre><code>flowbits:isset,bot_founded;</code></pre> <h2 id="3-检测规则">3. 检测规则</h2> <p>通过上述分析，我们可以写出如下检测规则：</p> <pre><code>alert tcp any any -&gt; any 3399 (pcre:"/login|Initial/";flowbits:set,bot_founded;flowbits:noalert;sid:1000000) alert tcp any any -&gt; any 3399 (msg:"bot founded";pcre:"/((25[0-5]|2[0-4]\d|1?\d{1,2})\.){3}(25[0-5]|2[0-4]\d|1?\d{1,2}):(6553[0-5]|655[0-2]\d|65[0-4]\d{2}|6[0-4]\d{3}|[1-5]?\d{1,4})/";flowbits:isset,bot_founded;sid:1000001)</code></pre> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-84814.htm">动物接种疫苗的好处有哪些 动物接种疫苗的好处有哪些呢</a></p>
+                                        <p>下一个：<a href="/news/article-85537.htm">养宠物违约金怎么赔偿 养宠物违约金怎么赔偿的</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-3-21-free-high-speed-nodes.htm" title="「3月21日」最高速度21.2M/S，2025年Xray每天更新免费机场订阅节点链接">「3月21日」最高速度21.2M/S，2025年Xray每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-25-winxray-github.htm" title="「3月25日」最高速度18.1M/S，2025年Xray每天更新免费机场订阅节点链接">「3月25日」最高速度18.1M/S，2025年Xray每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/news/article-69800.htm" title="动物疫苗接种技术指南 动物疫苗接种技术指南最新版">动物疫苗接种技术指南 动物疫苗接种技术指南最新版</a></li>
+                        <li class="py-2"><a href="/news/article-68499.htm" title="动物疫苗价格一览表图片大全集（动物疫苗价格一览表图片大全集高清）">动物疫苗价格一览表图片大全集（动物疫苗价格一览表图片大全集高清）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-9-winxray-github.htm" title="「3月9日」最高速度20.6M/S，2025年Xray每天更新免费机场订阅节点链接">「3月9日」最高速度20.6M/S，2025年Xray每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-4-winxray-github.htm" title="「3月4日」最高速度21.4M/S，2025年Xray每天更新免费机场订阅节点链接">「3月4日」最高速度21.4M/S，2025年Xray每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/news/article-67856.htm" title="C#实现文件Move和Copy操作_C#教程_">C#实现文件Move和Copy操作_C#教程_</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-17-winxray-github.htm" title="「3月17日」最高速度20.6M/S，2025年Xray每天更新免费机场订阅节点链接">「3月17日」最高速度20.6M/S，2025年Xray每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-15-free-subscribe-node.htm" title="「3月15日」最高速度21.2M/S，2025年Xray每天更新免费机场订阅节点链接">「3月15日」最高速度21.2M/S，2025年Xray每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/news/article-66583.htm" title="python虚拟环境virtualenv">python虚拟环境virtualenv</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Services Area End -->
+    </main>
+        <footer>
+        <!--? Footer Start-->
+        <div class="footer-area section-bg" data-background="/assets/website/img/xraywindows/gallery/footer_bg.jpg">
+            <div class="container">
+                <div class="footer-bottom">
+                    <div class="row d-flex justify-content-between align-items-center">
+                        <div class="col-xl-9 col-lg-8">
+                            <div class="footer-copy-right">
+                    <p>
+                        <a href="/">首页</a> | 
+                        <a href="/free-node/">免费节点</a> | 
+                        <a href="/news/">新闻资讯</a> |
+                        <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                                <p>
+                                    Xray Windows节点订阅官网 版权所有 Powered by WordPress
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4">
+                            <!-- Footer Social -->
+                            <div class="footer-social f-right">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fas fa-globe"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End-->
+    </footer>
+    <!-- Scroll Up -->
+    <div id="back-top">
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>
+    <!-- JS here -->
+    <script src="/assets/website/js/frontend/xraywindows/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="/assets/website/js/frontend/xraywindows/vendor/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/popper.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="/assets/website/js/frontend/xraywindows/jquery.slicknav.min.js"></script>
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="/assets/website/js/frontend/xraywindows/owl.carousel.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/slick.min.js"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="/assets/website/js/frontend/xraywindows/wow.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/animated.headline.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/jquery.magnific-popup.js"></script>
+    <!-- Nice-select, sticky -->
+    <script src="/assets/website/js/frontend/xraywindows/jquery.nice-select.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/jquery.sticky.js"></script>
+
+    <!-- contact js -->
+    <script src="/assets/website/js/frontend/xraywindows/contact.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/jquery.form.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/jquery.validate.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/mail-script.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/jquery.ajaxchimp.min.js"></script>
+    <!-- Jquery Plugins, main Jquery -->
+    <script src="/assets/website/js/frontend/xraywindows/plugins.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
