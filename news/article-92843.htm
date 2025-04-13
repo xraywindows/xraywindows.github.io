@@ -1,0 +1,268 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://xraywindows.github.io/news/article-92843.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>设计模式——原型模式</title>
+        <meta name="description" content="阅读原文请访问我的博客BrightLoong's Blog   一. 概述 原型模式（Prototype） ，用原型实例指定创建对象的种类，并且通过拷贝这些原型创建新的对象。 原型模式其实就是从一个对" />
+        <link rel="icon" href="/assets/website/img/xraywindows/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Xray Windows节点订阅官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://xraywindows.github.io/news/article-92843.htm" />
+    <meta property="og:site_name" content="Xray Windows节点订阅官网" />
+    <meta property="og:title" content="设计模式——原型模式" />
+    <meta property="og:image" content="https://xraywindows.github.io/uploads/20240815/ea60a8832a080ee2babfcf644d599534.webp" />
+        <meta property="og:release_date" content="2025-04-10T08:19:14" />
+    <meta property="og:updated_time" content="2025-04-10T08:19:14" />
+        <meta property="og:description" content="阅读原文请访问我的博客BrightLoong's Blog   一. 概述 原型模式（Prototype） ，用原型实例指定创建对象的种类，并且通过拷贝这些原型创建新的对象。 原型模式其实就是从一个对" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="manifest" href="site.webmanifest">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="设计模式——原型模式">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- CSS here -->
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/owl.carousel.min.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/slicknav.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/flaticon.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/animate.min.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/themify-icons.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/slick.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/nice-select.css">
+    <link rel="stylesheet" href="/assets/website/css/xraywindows/style.css">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3W6FX62N6S"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3W6FX62N6S');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body class="body-bg" data-page="detail">
+        <!--? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="/assets/website/img/xraywindows/logo/loder.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <header>
+        <!-- Header Start -->
+        <div class="header-area">
+            <div class="main-header ">
+                <div class="header-bottom  header-sticky">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <!-- Logo -->
+                            <div class="col-md-4">
+                                <div class="logo">
+                                    <a href="/">
+                                                                        <span>Xray Windows</span>
+                                                                        </a>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="menu-wrapper  d-flex align-items-center justify-content-end">
+                                    <!-- Main-menu -->
+                                    <div class="main-menu d-none d-lg-block">
+                                        <nav>
+                                            <ul id="navigation">
+                                                                                                <li><a href="/">首页</a></li>
+                                                                                                <li><a href="/free-nodes/">免费节点</a></li>
+                                                                                                <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                                                <li><a href="/client.htm">客户端</a></li>
+                                                                                                <li><a href="/news/">新闻资讯</a></li>
+                                                                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Mobile Menu -->
+                            <div class="col-12">
+                                <div class="mobile_menu d-block d-lg-none"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+    </header>
+    <main>
+        <!--? Hero Start -->
+        <div class="slider-area2">
+            <div class="slider-height2 hero-overly2 d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap hero-cap2 text-center">
+                                <h1>设计模式——原型模式</h1>
+                                <p>
+                                    <a href="/">首页</a> / <a href="/news/">新闻资讯</a> / <span>正文</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--? Categories Area Start -->
+        <div class="categories-area section-padding30">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9">
+                                        <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <div class="show-content-free"> <div class="image-package"> <div class="image-container"> <div class="image-container-fill"></div> <div class="image-view">阅读原文请访问我的博客<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://brightloong.github.io/2018/07/08/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E2%80%94%E2%80%94%E5%8E%9F%E5%9E%8B%E6%A8%A1%E5%BC%8F/"  rel="nofollow">BrightLoong's Blog</a></div> </div> </div> <h2>一. 概述</h2> <p><code>原型模式（Prototype）</code> ，用原型实例指定创建对象的种类，并且通过拷贝这些原型创建新的对象。</p> <p>原型模式其实就是从一个对象再创建另外一个可定制的对象，而且不需要知道任何创建的细节。</p> <p>相信大家都都听过Java中的克隆（clone()），所谓的原型模式其实就是克隆，以某个对象为原型，复制出新的对象。</p> <h2>二. 代码实现</h2> <p>在概述中提到，原型模式其实就是Java中的克隆，在Java中实现克隆可以通过实现 Cloneable接口，并重写clone()方法来实现。可以发现Cloneable接口中并没有定义任何方法，clone()方法定义在Object中，其实Cloneable和Serializable一样都是标记型接口，内部没有方法和属性，实现Cloneable接口表示该对象能被克隆，能使用Object.clone()方法。如果没有实现Cloneable的类调用Object.clone()方法就会抛出CloneNotSupportedException。</p> <h3>Prototype</h3> <p>实现Cloneable，并重写clone()方法，Prototype有两个属性，一个是基本类型的，一个是对象引用，之后来看clone的结果是怎么样的。</p> <pre><code class="java">package io.github.brightloong.design.prototype;  /**  * Created by BrightLoong on 2018/7/8.  */ public class Prototype implements Cloneable {     //基本类型的属性     private String attribute;      //对象属性，引用     private Attribute attributeObject;      public Prototype(String attribute, Attribute attributeObject) {         this.attribute = attribute;         this.attributeObject = attributeObject;     }      public String getAttribute() {         return attribute;     }      public void setAttribute(String attribute) {         this.attribute = attribute;     }      public Attribute getAttributeObject() {         return attributeObject;     }      public void setAttributeObject(Attribute attributeObject) {         this.attributeObject = attributeObject;     }      /**      * 重写clone方法，这里实现的是浅拷贝，如果要进行深拷贝需要自己实现。      * @return      * @throws CloneNotSupportedException      */     @Override     public Object clone() throws CloneNotSupportedException {         return super.clone();     } }</code></pre> <h3>Attribute</h3> <pre><code class="java">package io.github.brightloong.design.prototype;  /**  * Created by BrightLoong on 2018/7/8.  */ public class Attribute {     public String name;      public Attribute(String name) {         this.name = name;     }      public String getName() {         return name;     }      public void setName(String name) {         this.name = name;     } }</code></pre> <h3>客户端调用和输出</h3> <pre><code class="java">package io.github.brightloong.design.prototype;  /**  * Created by BrightLoong on 2018/7/8.  */ public class Client {     public static void main(String[] args) throws CloneNotSupportedException {         Attribute attributeObject = new Attribute("BrightLoong");         Prototype prototype = new Prototype("属性", attributeObject);         Prototype copy = (Prototype) prototype.clone();          System.out.println(copy.getAttribute() + "======" + copy.getAttributeObject().getName());          //克隆后，原型中的对象引用的还是同一个，所以输出true         System.out.println(attributeObject == copy.getAttributeObject());     } }</code></pre> <p>输出如下：</p> <pre><code>属性======BrightLoong true</code></pre> <p>可以看到结果符合预期，进行了clone，但是发现Attribute属性试用==比较返回的是true，说明引用的是同一个Attribute，两个Prototype对象引用了同一个Attribute对象，这就是所谓的浅拷贝。</p> <h2>三. 浅拷贝和深拷贝</h2> <p>Object的clone()方法，如果属性是基本类型，对该属性的值进行复制，如果属性是引用类型，则复制引用而不是复制引用的对象。</p> <p>浅拷贝：浅拷贝是指拷贝对象时，拷贝的对象的所有基本类型属性的值都与原来的对象的值相同，而引用属性仍然指向原来对象中的引用属性。</p> <p>深拷贝：深拷贝不仅拷贝对象本身，而且拷贝对象包含的引用指向的所有对象。</p> <h2>四. 深拷贝代码实现</h2> <p>如何实现深拷贝，当然最简单粗暴的方法就是对引用的对象实现克隆，如果引用的对象中还有对象，那么对引用的对象中的对象的实现克隆，依次类推。</p> <p>这里使用另外一种方法，通过序列化(Serialization) 类实现深克隆。通过将对象写到流中，写到流中的对象是原有对象的一个拷贝，而原对象仍然存在于内存中，再从流里将其读出来，可以实现深克隆。 对象序列化需要实现Serializable 接口。</p> <p>下面是修改后的代码：</p> <h3>Prototype</h3> <p>同时实现Cloneable, Serializable ，并重写clone()方法。</p> <pre><code class="java">package io.github.brightloong.design.prototype;  import java.io.*;  /**  * Created by BrightLoong on 2018/7/8.  */ public class Prototype implements Cloneable, Serializable {     //基本类型的属性     private String attribute;      //对象属性，引用     private Attribute attributeObject;      public Prototype(String attribute, Attribute attributeObject) {         this.attribute = attribute;         this.attributeObject = attributeObject;     }      public String getAttribute() {         return attribute;     }      public void setAttribute(String attribute) {         this.attribute = attribute;     }      public Attribute getAttributeObject() {         return attributeObject;     }      public void setAttributeObject(Attribute attributeObject) {         this.attributeObject = attributeObject;     }      /**      * 重写clone方法，这里实现的是浅拷贝，如果要进行深拷贝需要自己实现。      * @return      * @throws CloneNotSupportedException      */     @Override     public Object clone() throws CloneNotSupportedException {         //将对象写入流中          ByteArrayOutputStream bao=new  ByteArrayOutputStream();         ObjectOutputStream oos = null;         ObjectInputStream ois = null;         Object copy = null;         try {             //将对象写入流中             oos = new ObjectOutputStream(bao);             oos.writeObject(this);             //将对象从流中取出             ByteArrayInputStream bis=new  ByteArrayInputStream(bao.toByteArray());             ois=new  ObjectInputStream(bis);             copy =  ois.readObject();         } catch (Exception e) {             e.printStackTrace();             if (oos != null) {                 try {                     oos.close();                 } catch (IOException e1) {                     e1.printStackTrace();                 }             }             if (ois != null) {                 try {                     ois.close();                 } catch (IOException e1) {                     e1.printStackTrace();                 }             }         }         return copy;     } }</code></pre> <h3>Attribute</h3> <p>Attribute同样实现Serializable。</p> <pre><code class="java">package io.github.brightloong.design.prototype;  import java.io.Serializable;  /**  * Created by BrightLoong on 2018/7/8.  */ public class Attribute implements Serializable{     public String name;      public Attribute(String name) {         this.name = name;     }      public String getName() {         return name;     }      public void setName(String name) {         this.name = name;     } }</code></pre> <h3>输出</h3> <p>还是使用原来的Client，输出如下，可以看到Attribute属性不再是同一个了，使用==比较返回了false。</p> <pre><code>属性======BrightLoong false</code></pre> <h2>五. 总结</h2> <h3>使用场景</h3> <ul> <li>如果某个对象new的过程中很耗时（类初始化需要消化非常多的资源，这个资源包括数据、硬件资源等 ），则可以考虑使用原型模式 。</li> <li>如果系统要保存对象的状态，而对象的状态变化很小，或者对象本身占用内存较少时。</li> <li>一个对象需要提供给其他对象访问，而且各个调用者可能都需要修改其值时，可以考虑使用原型模式拷贝多个对象供调用者使用 。</li> </ul> <h3>优点</h3> <ul> <li>提高了效率，逃避了类的构造方法（<strong>对象拷贝时，类的构造函数是不会被执行的</strong> ）。</li> <li>当创建新的对象实例较为复杂时，使用原型模式可以简化对象的创建过程 。</li> </ul> <h3>缺点</h3> <ul> <li>在实现深克隆的时候，使用的对象可能是原来已经存在的，并且没有实现Serializable，这个时候只能自己去一层一层的克隆，编写较为复杂的代码。</li> </ul> <h3>其他</h3> <p>在很多工具类中已经实现了属性拷贝，并不用我们自己去实现比如apache.commons.beanutils 中的BeanUtils.copyProperties(obj1,obj2) 和PropertyUtils .copyProperties(obj1,obj2)。spring中也有类似的实现。</p> </div> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-92127.htm">一文看懂HBase倒序分页查询（实现分页跳转）</a></p>
+                                        <p>下一个：<a href="/news/article-92844.htm">宠物品牌加盟（宠物加盟店排行榜加盟10大品牌）</a></p>
+                                    </div>
+                                    </div>
+                    <div class="col-md-3">
+                        <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-82676.htm" title="国内动物疫苗龙头企业名单最新 国内动物疫苗龙头企业名单最新公布">国内动物疫苗龙头企业名单最新 国内动物疫苗龙头企业名单最新公布</a></li>
+                        <li class="py-2"><a href="/news/article-84813.htm" title="狗粮国内排名前十品牌（国内狗粮十大品牌）">狗粮国内排名前十品牌（国内狗粮十大品牌）</a></li>
+                        <li class="py-2"><a href="/news/article-90625.htm" title="属马的适不适合养猫（属马的可以养猫吗?）">属马的适不适合养猫（属马的可以养猫吗?）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-5-winxray-github.htm" title="「4月5日」最高速度21.8M/S，2025年Xray每天更新免费机场订阅节点链接">「4月5日」最高速度21.8M/S，2025年Xray每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-10-winxray-windows.htm" title="「4月10日」最高速度20.8M/S，2025年Xray每天更新免费机场订阅节点链接">「4月10日」最高速度20.8M/S，2025年Xray每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/news/article-83417.htm" title="免费宠物领养网（免费宠物领养网）">免费宠物领养网（免费宠物领养网）</a></li>
+                        <li class="py-2"><a href="/news/article-77832.htm" title="中牧疫苗价格表（中牧疫苗销售电话）">中牧疫苗价格表（中牧疫苗销售电话）</a></li>
+                        <li class="py-2"><a href="/news/article-93586.htm" title="宠物家庭寄养合同对甲方有益（宠物家庭寄养合同对甲方有益处吗）">宠物家庭寄养合同对甲方有益（宠物家庭寄养合同对甲方有益处吗）</a></li>
+                        <li class="py-2"><a href="/news/article-89886.htm" title="动物疫苗接种时间要求是什么样的呢（动物 疫苗）">动物疫苗接种时间要求是什么样的呢（动物 疫苗）</a></li>
+                        <li class="py-2"><a href="/news/article-84121.htm" title="新手做电商卖什么产品好（新手做电商选择哪类产品）">新手做电商卖什么产品好（新手做电商选择哪类产品）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">36</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Services Area End -->
+    </main>
+        <footer>
+        <!--? Footer Start-->
+        <div class="footer-area section-bg" data-background="/assets/website/img/xraywindows/gallery/footer_bg.jpg">
+            <div class="container">
+                <div class="footer-bottom">
+                    <div class="row d-flex justify-content-between align-items-center">
+                        <div class="col-xl-9 col-lg-8">
+                            <div class="footer-copy-right">
+                                                    <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                                <p>
+                                    Xray Windows节点订阅官网 版权所有 Powered by WordPress
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4">
+                            <!-- Footer Social -->
+                            <div class="footer-social f-right">
+                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.facebook.com/sai4ull"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#"><i class="fas fa-globe"></i></a>
+                                <a href="#"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer End-->
+    </footer>
+    <!-- Scroll Up -->
+    <div id="back-top">
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>
+    <!-- JS here -->
+    <script src="/assets/website/js/frontend/xraywindows/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="/assets/website/js/frontend/xraywindows/vendor/jquery-3.5.1.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/popper.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="/assets/website/js/frontend/xraywindows/jquery.slicknav.min.js"></script>
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="/assets/website/js/frontend/xraywindows/owl.carousel.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/slick.min.js"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="/assets/website/js/frontend/xraywindows/wow.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/animated.headline.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/jquery.magnific-popup.js"></script>
+    <!-- Nice-select, sticky -->
+    <script src="/assets/website/js/frontend/xraywindows/jquery.nice-select.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/jquery.sticky.js"></script>
+
+    <!-- contact js -->
+    <script src="/assets/website/js/frontend/xraywindows/contact.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/jquery.form.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/jquery.validate.min.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/mail-script.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/jquery.ajaxchimp.min.js"></script>
+    <!-- Jquery Plugins, main Jquery -->
+    <script src="/assets/website/js/frontend/xraywindows/plugins.js"></script>
+    <script src="/assets/website/js/frontend/xraywindows/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script>
+    <script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
