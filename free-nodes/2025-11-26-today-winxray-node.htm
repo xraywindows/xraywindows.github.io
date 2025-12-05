@@ -314,9 +314,14 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 支持哪些传输层协议？</h5></div>
+    <div class="panel-heading"><h5>PassWall2 是什么软件？</h5></div>
     <div class="panel-body">
-        V2Ray 支持多种传输层，包括 TCP、mKCP、WebSocket、gRPC、QUIC 等。每种传输方式都有不同的性能特点，例如 TCP 稳定、WS 兼容 CDN、QUIC 延迟低。<hr />    </div>
+        PassWall2 是一个运行在 OpenWRT 路由器上的插件，用于代理流量分流和节点管理。它支持多种协议，包括 V2Ray、Trojan、SSR 等。通过 Web 界面，用户可以灵活设置不同设备走不同代理，适合家庭或小型局域网使用。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>VLESS + Reality 与 Trojan 在性能上差异大吗？</h5></div>
+    <div class="panel-body">
+        两者性能相近。VLESS + Reality 伪装更自然，适合强封锁地区；Trojan 则依托标准 TLS 实现高速连接。选择取决于服务器支持与环境稳定性。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>PassWall2 的规则优先级如何设置？</h5></div>
@@ -329,19 +334,14 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         Matsuri 可加载 Xray 核心，通过配置多 inbound/outbound 模块实现 VMess、VLess、Trojan 等协议共存。用户可在单一服务端配置文件中同时支持多客户端访问，便于统一管理。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VLESS 是否比 Trojan 更稳定？</h5></div>
+    <div class="panel-heading"><h5>VLESS + XTLS 模式适合移动网络吗？</h5></div>
     <div class="panel-body">
-        两者都非常稳定，但 VLESS 在多平台兼容性上略优，而 Trojan 在 HTTPS 伪装和 TLS 安全性上更强。选择取决于服务器环境与具体需求，两者皆为高性能协议。<hr />    </div>
+        XTLS 模式降低加密开销，减少握手次数，适合高延迟或不稳定移动网络。结合策略组和多出口节点，可提升访问速度和连接稳定性，确保用户体验流畅。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VLESS + Reality 与 Trojan 在性能上差异大吗？</h5></div>
+    <div class="panel-heading"><h5>V2Ray 支持哪些传输层协议？</h5></div>
     <div class="panel-body">
-        两者性能相近。VLESS + Reality 伪装更自然，适合强封锁地区；Trojan 则依托标准 TLS 实现高速连接。选择取决于服务器支持与环境稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Quantumult X 支持 VLESS 吗？</h5></div>
-    <div class="panel-body">
-        Quantumult X 目前官方未原生支持 VLESS，但通过手动修改配置或第三方脚本可实现兼容。若主要使用 VLESS 协议，可考虑使用 Sing-box 或 Shadowrocket 作为替代。<hr />    </div>
+        V2Ray 支持多种传输层，包括 TCP、mKCP、WebSocket、gRPC、QUIC 等。每种传输方式都有不同的性能特点，例如 TCP 稳定、WS 兼容 CDN、QUIC 延迟低。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Potatso Lite 显示证书错误，如何修复？</h5></div>
@@ -349,19 +349,19 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         证书错误通常由域名与证书不匹配或证书链不完整引起。请检查服务器证书是否为有效域名签发并包含完整链，如果使用 Let's Encrypt，请确保证书未过期并已正确安装到反向代理或服务端。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>VLESS + XTLS 模式适合移动网络吗？</h5></div>
+    <div class="panel-heading"><h5>Quantumult X 支持 VLESS 吗？</h5></div>
     <div class="panel-body">
-        XTLS 模式降低加密开销，减少握手次数，适合高延迟或不稳定移动网络。结合策略组和多出口节点，可提升访问速度和连接稳定性，确保用户体验流畅。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 是什么软件？</h5></div>
-    <div class="panel-body">
-        PassWall2 是一个运行在 OpenWRT 路由器上的插件，用于代理流量分流和节点管理。它支持多种协议，包括 V2Ray、Trojan、SSR 等。通过 Web 界面，用户可以灵活设置不同设备走不同代理，适合家庭或小型局域网使用。<hr />    </div>
+        Quantumult X 目前官方未原生支持 VLESS，但通过手动修改配置或第三方脚本可实现兼容。若主要使用 VLESS 协议，可考虑使用 Sing-box 或 Shadowrocket 作为替代。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Hiddify Next 如何设置不同用户的带宽限制？</h5></div>
     <div class="panel-body">
-        管理员可为每个用户设置独立的带宽上限和流量配额。超过配额后可自动阻断或降速，确保服务器资源合理分配，避免单个用户占用过多带宽而影响其他用户体验。    </div>
+        管理员可为每个用户设置独立的带宽上限和流量配额。超过配额后可自动阻断或降速，确保服务器资源合理分配，避免单个用户占用过多带宽而影响其他用户体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>VLESS 是否比 Trojan 更稳定？</h5></div>
+    <div class="panel-body">
+        两者都非常稳定，但 VLESS 在多平台兼容性上略优，而 Trojan 在 HTTPS 伪装和 TLS 安全性上更强。选择取决于服务器环境与具体需求，两者皆为高性能协议。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -390,16 +390,16 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-10-21-winxray-github.htm" title="「10月21日」最高速度19.4M/S，2025年Xray每天更新免费机场订阅节点链接">「10月21日」最高速度19.4M/S，2025年Xray每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-13-winxray-node-github.htm" title="「11月13日」最高速度22.4M/S，2025年Xray每天更新免费机场订阅节点链接">「11月13日」最高速度22.4M/S，2025年Xray每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-27-free-node-subscribe-links.htm" title="「11月27日」最高速度22.9M/S，2025年Xray每天更新免费机场订阅节点链接">「11月27日」最高速度22.9M/S，2025年Xray每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-21-winxray-node.htm" title="「11月21日」最高速度22.7M/S，2025年Xray每天更新免费机场订阅节点链接">「11月21日」最高速度22.7M/S，2025年Xray每天更新免费机场订阅节点链接</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-11-17-latest-winxray-node.htm" title="「11月17日」最高速度18.6M/S，2025年Xray每天更新免费机场订阅节点链接">「11月17日」最高速度18.6M/S，2025年Xray每天更新免费机场订阅节点链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-5-free-winxray-node.htm" title="「11月5日」最高速度21.6M/S，2025年Xray每天更新免费机场订阅节点链接">「11月5日」最高速度21.6M/S，2025年Xray每天更新免费机场订阅节点链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-14-free-subscribe-node.htm" title="「10月14日」最高速度21.4M/S，2025年Xray每天更新免费机场订阅节点链接">「10月14日」最高速度21.4M/S，2025年Xray每天更新免费机场订阅节点链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-19-node-share-links.htm" title="「10月19日」最高速度20.6M/S，2025年Xray每天更新免费机场订阅节点链接">「10月19日」最高速度20.6M/S，2025年Xray每天更新免费机场订阅节点链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-7-free-subscribe-node.htm" title="「11月7日」最高速度21.7M/S，2025年Xray每天更新免费机场订阅节点链接">「11月7日」最高速度21.7M/S，2025年Xray每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-30-free-high-speed-nodes.htm" title="「11月30日」最高速度20.6M/S，2025年Xray每天更新免费机场订阅节点链接">「11月30日」最高速度20.6M/S，2025年Xray每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-26-today-winxray-node.htm" title="「11月26日」最高速度19.9M/S，2025年Xray每天更新免费机场订阅节点链接">「11月26日」最高速度19.9M/S，2025年Xray每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-22-free-high-speed-nodes.htm" title="「11月22日」最高速度21.3M/S，2025年Xray每天更新免费机场订阅节点链接">「11月22日」最高速度21.3M/S，2025年Xray每天更新免费机场订阅节点链接</a></li>
                         <li class="py-2"><a href="/free-nodes/2025-11-10-latest-winxray-node.htm" title="「11月10日」最高速度18M/S，2025年Xray每天更新免费机场订阅节点链接">「11月10日」最高速度18M/S，2025年Xray每天更新免费机场订阅节点链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-23-free-subscribe-node.htm" title="「10月23日」最高速度21.6M/S，2025年Xray每天更新免费机场订阅节点链接">「10月23日」最高速度21.6M/S，2025年Xray每天更新免费机场订阅节点链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-15-winxray-node-github.htm" title="「10月15日」最高速度18M/S，2025年Xray每天更新免费机场订阅节点链接">「10月15日」最高速度18M/S，2025年Xray每天更新免费机场订阅节点链接</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-10-12-winxray-github.htm" title="「10月12日」最高速度22.9M/S，2025年Xray每天更新免费机场订阅节点链接">「10月12日」最高速度22.9M/S，2025年Xray每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-12-winxray-node-github.htm" title="「11月12日」最高速度21.7M/S，2025年Xray每天更新免费机场订阅节点链接">「11月12日」最高速度21.7M/S，2025年Xray每天更新免费机场订阅节点链接</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-11-7-free-subscribe-node.htm" title="「11月7日」最高速度21.7M/S，2025年Xray每天更新免费机场订阅节点链接">「11月7日」最高速度21.7M/S，2025年Xray每天更新免费机场订阅节点链接</a></li>
                     </ul>
     </div>
 </div>
@@ -411,10 +411,10 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">25</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
+                <h4><span class="badge" style="float: right;">5</span> <a href="/date/2025-12/" title="2025-12 归档">2025-12</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2025-10/" title="2025-10 归档">2025-10</a></h4>
+                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
             </li>
                     </ul>
     </div>
