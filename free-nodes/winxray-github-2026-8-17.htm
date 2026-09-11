@@ -303,24 +303,9 @@ A：定期运行 <code data-start="2782" data-end="2795">opkg update</code> 和 
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>如何为 Trojan 配置 ALPN 与 SNI 提升伪装效果？</h5></div>
+    <div class="panel-heading"><h5>V2Ray 中的多入口（inbounds）配置有什么用？</h5></div>
     <div class="panel-body">
-        在服务器与客户端配置中设置合适的 SNI（伪装域名）并启用 ALPN（例如 http/1.1），确保 TLS 握手时使用常见的应用层协议标识，从而增加流量与普通 HTTPS 的相似度，降低被检测概率。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Hysteria2 的 QUIC 协议相比 TCP 有什么优势？</h5></div>
-    <div class="panel-body">
-        QUIC 协议基于 UDP，减少了握手延迟，支持多路复用和拥塞控制优化。Hysteria2 利用 QUIC 提供更低延迟、更高稳定性的网络连接，尤其适合高延迟或丢包环境。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 协议混淆如何增强安全性？</h5></div>
-    <div class="panel-body">
-        SSR 可通过选择混淆方式和协议组合隐藏真实流量特征，降低被 DPI 检测和封锁风险。合理配置可提高节点隐蔽性和长期可用性，保证科学上网体验稳定可靠。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>PassWall2 的延迟测试如何影响策略组选择？</h5></div>
-    <div class="panel-body">
-        PassWall2 会根据节点延迟结果更新策略组的优先节点，自动选择延迟最低的节点处理流量。这样可以优化访问速度，提高网页浏览、视频和游戏体验的稳定性。<hr />    </div>
+        V2Ray 支持多入口配置，可以同时开启 HTTP、Socks、TUN 等多种代理方式，方便不同程序接入。通过设置不同端口，用户可实现局域网共享或分离不同流量来源。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Surfboard 如何结合规则屏蔽广告？</h5></div>
@@ -328,19 +313,14 @@ A：定期运行 <code data-start="2782" data-end="2795">opkg update</code> 和 
         Surfboard 可通过规则文件匹配广告域名或 URL，并将其重定向或阻断。结合策略组自动更新规则，可实现广告屏蔽，提高浏览体验和节省带宽。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 中的多入口（inbounds）配置有什么用？</h5></div>
+    <div class="panel-heading"><h5>如何为 Trojan 配置 ALPN 与 SNI 提升伪装效果？</h5></div>
     <div class="panel-body">
-        V2Ray 支持多入口配置，可以同时开启 HTTP、Socks、TUN 等多种代理方式，方便不同程序接入。通过设置不同端口，用户可实现局域网共享或分离不同流量来源。<hr />    </div>
+        在服务器与客户端配置中设置合适的 SNI（伪装域名）并启用 ALPN（例如 http/1.1），确保 TLS 握手时使用常见的应用层协议标识，从而增加流量与普通 HTTPS 的相似度，降低被检测概率。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Clash 如何配置策略组优先节点？</h5></div>
+    <div class="panel-heading"><h5>SSR 协议混淆如何增强安全性？</h5></div>
     <div class="panel-body">
-        在 Clash 中，用户可以通过策略组设置节点优先级，优先使用延迟低、稳定性高的节点。结合规则文件，可以根据域名或 IP 自动选择最优节点，实现更高效的网络访问体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Shadowrocket 节点延迟排序如何提高稳定性？</h5></div>
-    <div class="panel-body">
-        Shadowrocket 测试节点延迟和丢包率，将低延迟节点优先使用。结合策略组和规则文件，可保证网页、视频和游戏流量通过最优节点，提高连接稳定性和访问速度。<hr />    </div>
+        SSR 可通过选择混淆方式和协议组合隐藏真实流量特征，降低被 DPI 检测和封锁风险。合理配置可提高节点隐蔽性和长期可用性，保证科学上网体验稳定可靠。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Nekoray 支持节点订阅的自动更新吗？</h5></div>
@@ -348,9 +328,29 @@ A：定期运行 <code data-start="2782" data-end="2795">opkg update</code> 和 
         支持。用户可通过订阅 URL 批量更新节点，程序会自动下载并替换旧节点。定期自动更新可保证节点列表始终有效，减少手动维护的工作量，提高使用效率。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>Clash 如何配置策略组优先节点？</h5></div>
+    <div class="panel-body">
+        在 Clash 中，用户可以通过策略组设置节点优先级，优先使用延迟低、稳定性高的节点。结合规则文件，可以根据域名或 IP 自动选择最优节点，实现更高效的网络访问体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>VMess 连接不稳定的常见原因有哪些？</h5></div>
     <div class="panel-body">
-        VMess 连接不稳定可能由节点延迟过高、服务器防火墙、TLS 配置错误或 ISP 丢包引起。建议测试不同传输协议（如 WS、gRPC）或切换节点，检查日志确认具体错误信息。    </div>
+        VMess 连接不稳定可能由节点延迟过高、服务器防火墙、TLS 配置错误或 ISP 丢包引起。建议测试不同传输协议（如 WS、gRPC）或切换节点，检查日志确认具体错误信息。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>PassWall2 的延迟测试如何影响策略组选择？</h5></div>
+    <div class="panel-body">
+        PassWall2 会根据节点延迟结果更新策略组的优先节点，自动选择延迟最低的节点处理流量。这样可以优化访问速度，提高网页浏览、视频和游戏体验的稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Hysteria2 的 QUIC 协议相比 TCP 有什么优势？</h5></div>
+    <div class="panel-body">
+        QUIC 协议基于 UDP，减少了握手延迟，支持多路复用和拥塞控制优化。Hysteria2 利用 QUIC 提供更低延迟、更高稳定性的网络连接，尤其适合高延迟或丢包环境。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Shadowrocket 节点延迟排序如何提高稳定性？</h5></div>
+    <div class="panel-body">
+        Shadowrocket 测试节点延迟和丢包率，将低延迟节点优先使用。结合策略组和规则文件，可保证网页、视频和游戏流量通过最优节点，提高连接稳定性和访问速度。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -398,16 +398,16 @@ A：定期运行 <code data-start="2782" data-end="2795">opkg update</code> 和 
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-7-25-free-high-speed-nodes.htm" title="「7月25日」最高速度19.5M/S，2025年Xray每天更新免费机场订阅节点链接">「7月25日」最高速度19.5M/S，2025年Xray每天更新免费机场订阅节点链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-21-winxray-node.htm" title="「7月21日」最高速度19.2M/S，2025年Xray每天更新免费机场订阅节点链接">「7月21日」最高速度19.2M/S，2025年Xray每天更新免费机场订阅节点链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-6-winxray-node-share.htm" title="「8月6日」最高速度22.7M/S，2025年Xray每天更新免费机场订阅节点链接">「8月6日」最高速度22.7M/S，2025年Xray每天更新免费机场订阅节点链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-7-23-winxray-github.htm" title="「7月23日」最高速度22M/S，2025年Xray每天更新免费机场订阅节点链接">「7月23日」最高速度22M/S，2025年Xray每天更新免费机场订阅节点链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-winxray-node-2026-8-7.htm" title="「8月7日」最高速度19.3M/S，2025年Xray每天更新免费机场订阅节点链接">「8月7日」最高速度19.3M/S，2025年Xray每天更新免费机场订阅节点链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-4-winxray-node-github.htm" title="「8月4日」最高速度22.1M/S，2025年Xray每天更新免费机场订阅节点链接">「8月4日」最高速度22.1M/S，2025年Xray每天更新免费机场订阅节点链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-high-speed-nodes-2026-7-29.htm" title="「7月29日」最高速度19.1M/S，2025年Xray每天更新免费机场订阅节点链接">「7月29日」最高速度19.1M/S，2025年Xray每天更新免费机场订阅节点链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-2-winxray-node-share.htm" title="「9月2日」最高速度19.9M/S，2025年Xray每天更新免费机场订阅节点链接">「9月2日」最高速度19.9M/S，2025年Xray每天更新免费机场订阅节点链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-14-latest-winxray-node.htm" title="「8月14日」最高速度18.3M/S，2025年Xray每天更新免费机场订阅节点链接">「8月14日」最高速度18.3M/S，2025年Xray每天更新免费机场订阅节点链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-high-speed-nodes-2026-9-1.htm" title="「9月1日」最高速度23M/S，2025年Xray每天更新免费机场订阅节点链接">「9月1日」最高速度23M/S，2025年Xray每天更新免费机场订阅节点链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-high-speed-nodes-2026-8-27.htm" title="「8月27日」最高速度21.9M/S，2025年Xray每天更新免费机场订阅节点链接">「8月27日」最高速度21.9M/S，2025年Xray每天更新免费机场订阅节点链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-winxray-node-2026-8-15.htm" title="「8月15日」最高速度22.4M/S，2025年Xray每天更新免费机场订阅节点链接">「8月15日」最高速度22.4M/S，2025年Xray每天更新免费机场订阅节点链接</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-8-18-free-node-subscribe.htm" title="「8月18日」最高速度19.3M/S，2025年Xray每天更新免费机场订阅节点链接">「8月18日」最高速度19.3M/S，2025年Xray每天更新免费机场订阅节点链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/free-node-subscribe-links-2026-8-1.htm" title="「8月1日」最高速度18.4M/S，2025年Xray每天更新免费机场订阅节点链接">「8月1日」最高速度18.4M/S，2025年Xray每天更新免费机场订阅节点链接</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-10-winxray-windows.htm" title="「8月10日」最高速度18.3M/S，2025年Xray每天更新免费机场订阅节点链接">「8月10日」最高速度18.3M/S，2025年Xray每天更新免费机场订阅节点链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-winxray-node-2026-8-29.htm" title="「8月29日」最高速度19.5M/S，2025年Xray每天更新免费机场订阅节点链接">「8月29日」最高速度19.5M/S，2025年Xray每天更新免费机场订阅节点链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/free-winxray-node-2026-8-13.htm" title="「8月13日」最高速度21.6M/S，2025年Xray每天更新免费机场订阅节点链接">「8月13日」最高速度21.6M/S，2025年Xray每天更新免费机场订阅节点链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/winxray-github-2026-8-17.htm" title="「8月17日」最高速度20.7M/S，2025年Xray每天更新免费机场订阅节点链接">「8月17日」最高速度20.7M/S，2025年Xray每天更新免费机场订阅节点链接</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/winxray-node-2026-8-31.htm" title="「8月31日」最高速度18.3M/S，2025年Xray每天更新免费机场订阅节点链接">「8月31日」最高速度18.3M/S，2025年Xray每天更新免费机场订阅节点链接</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -419,10 +419,10 @@ A：定期运行 <code data-start="2782" data-end="2795">opkg update</code> 和 
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">21</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
+                <h4><span class="badge" style="float: right;">4</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">13</span> <a href="/date/2026-07/" title="2026-07 归档">2026-07</a></h4>
+                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
             </li>
                     </ul>
     </div>
