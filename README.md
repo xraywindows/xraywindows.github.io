@@ -1,4 +1,4 @@
-# 「11月7日」最高速度18.6M/S，2025年Xray每天更新免费机场订阅节点链接  更新时间 2026-11-07 09:56:47
+# 「11月14日」最高速度21.8M/S，2026年Xray每天更新免费机场订阅节点链接  更新时间 2026-11-14 10:04:12
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://xraywindows.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### 免费Clash节点订阅链接
 
-- https://xraywindows.github.io/uploads/2026/11/0-20261107.yaml
-- https://xraywindows.github.io/uploads/2026/11/1-20261107.yaml
-- https://xraywindows.github.io/uploads/2026/11/2-20261107.yaml
-- https://xraywindows.github.io/uploads/2026/11/3-20261107.yaml
-- https://xraywindows.github.io/uploads/2026/11/4-20261107.yaml
+- https://xraywindows.github.io/uploads/2026/11/0-20261114.yaml
+- https://xraywindows.github.io/uploads/2026/11/1-20261114.yaml
+- https://xraywindows.github.io/uploads/2026/11/2-20261114.yaml
+- https://xraywindows.github.io/uploads/2026/11/3-20261114.yaml
+- https://xraywindows.github.io/uploads/2026/11/4-20261114.yaml
 
 ### 免费V2ray节点订阅链接
 
-- https://xraywindows.github.io/uploads/2026/11/0-20261107.txt
-- https://xraywindows.github.io/uploads/2026/11/1-20261107.txt
-- https://xraywindows.github.io/uploads/2026/11/2-20261107.txt
-- https://xraywindows.github.io/uploads/2026/11/3-20261107.txt
-- https://xraywindows.github.io/uploads/2026/11/4-20261107.txt
+- https://xraywindows.github.io/uploads/2026/11/0-20261114.txt
+- https://xraywindows.github.io/uploads/2026/11/1-20261114.txt
+- https://xraywindows.github.io/uploads/2026/11/2-20261114.txt
+- https://xraywindows.github.io/uploads/2026/11/3-20261114.txt
+- https://xraywindows.github.io/uploads/2026/11/4-20261114.txt
 
 ### 免费Sing-box节点订阅链接
 
-- https://xraywindows.github.io/uploads/2026/11/20261107.json
+- https://xraywindows.github.io/uploads/2026/11/20261114.json
 
 ## 更多Clash节点订阅 ：
 
